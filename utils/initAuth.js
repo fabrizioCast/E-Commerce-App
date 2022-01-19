@@ -41,9 +41,8 @@ const initAuth = () => {
       maxAge: 12 * 60 * 60 * 24 * 1000, // twelve days
       overwrite: true,
       path: "/",
-      sameSite: "lax",
+      sameSite: false,
       secure: true, // set this to false in local (non-HTTPS) development
-      signed: true,
     },
     onVerifyTokenError: (err) => {
       console.error(err);
