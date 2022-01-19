@@ -1,4 +1,4 @@
-import firebase from "firebase/compat/app";
+import firebase from "utils/firebase";
 
 export function uploadImage(image, folderImageID) {
   return new Promise((resolve, reject) => {

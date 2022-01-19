@@ -1,4 +1,5 @@
 // ./initAuth.js
+import "./firebase";
 import { init } from "next-firebase-auth";
 
 const initAuth = () => {
@@ -27,12 +28,6 @@ const initAuth = () => {
     // useFirebaseAdminDefaultCredential: true,
     firebaseClientInitConfig: {
       apiKey: "AIzaSyAcoRVvDKi_XxgslN21-ShoDsHvJoohbYc",
-      authDomain: "test-app-77ad3.firebaseapp.com",
-      projectId: "test-app-77ad3",
-      storageBucket: "test-app-77ad3.appspot.com",
-      messagingSenderId: "240089969790",
-      appId: "1:240089969790:web:b46f78898596ff390d142f",
-      measurementId: "G-7TGYFVRSRQ",
     },
     cookies: {
       name: "vintify", // required
@@ -46,7 +41,7 @@ const initAuth = () => {
       maxAge: 12 * 60 * 60 * 24 * 1000, // twelve days
       overwrite: true,
       path: "/",
-      sameSite: "strict",
+      sameSite: "lax",
       secure: true, // set this to false in local (non-HTTPS) development
       signed: true,
     },

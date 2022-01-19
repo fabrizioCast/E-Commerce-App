@@ -5,11 +5,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 // Firebase
+import firebase from "utils/firebase";
 import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 import { AuthAction, withAuthUser } from "next-firebase-auth";
-
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
 
 // Firebase UI
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
@@ -22,10 +20,10 @@ const firebaseAuthConfig = {
   signInFlow: "popup",
   signInOptions: [
     {
-      provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      provider: GoogleAuthProvider.PROVIDER_ID,
     },
     {
-      provider: firebase.auth.GithubAuthProvider.PROVIDER_ID,
+      provider: GithubAuthProvider.PROVIDER_ID,
     },
   ],
   signInSuccessUrl: "/tienda",

@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 // Firebase
 import { useAuthUser } from "next-firebase-auth";
 import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
 
 // Styled Components
 import { ToolTipItem, ToolTipUsername, ToolTipWrapper } from "./styles";

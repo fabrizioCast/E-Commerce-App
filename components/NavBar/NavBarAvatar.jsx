@@ -46,7 +46,9 @@ const NavBarAvatar = ({ displaySm }) => {
         </Tippy>
       ) : (
         <Link href="/login">
-          <Button>Login</Button>
+          <a>
+            <Button>Login</Button>
+          </a>
         </Link>
       )}
     </NavBarItem>
