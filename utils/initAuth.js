@@ -35,7 +35,7 @@ const initAuth = () => {
       measurementId: "G-7TGYFVRSRQ",
     },
     cookies: {
-      name: "testApp", // required
+      name: "vintify", // required
       // Keys are required unless you set `signed` to `false`.
       // The keys cannot be accessible on the client side.
       keys: [
@@ -47,7 +47,7 @@ const initAuth = () => {
       overwrite: true,
       path: "/",
       sameSite: "strict",
-      secure: false, // set this to false in local (non-HTTPS) development
+      secure: true, // set this to false in local (non-HTTPS) development
       signed: true,
     },
     onVerifyTokenError: (err) => {

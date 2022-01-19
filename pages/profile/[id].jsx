@@ -47,6 +47,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default withAuthUser({
-  whenUnauthedAfterInit: AuthAction.REDIRECT_TO_LOGIN,
-})(Account);
+export default withAuthUser({})(Account);
